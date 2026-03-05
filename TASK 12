@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int spaces = 50;
+    int entry = 1;
+
+    while(spaces > 0 && entry != 0) {
+
+        printf("Enter 1 for car arrival (0 to stop): ");
+        scanf("%d", &entry);
+
+        if(entry == 1 && spaces > 0) {
+            spaces--;
+            printf("Car parked. Remaining spaces: %d\n", spaces);
+        }
+        else if(spaces == 0) {
+            printf("Parking lot is full!\n");
+        }
+    }
+
+    if(spaces == 0) {
+        printf("No more parking spaces available.\n");
+    }
+
+    return 0;
+}
